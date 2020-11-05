@@ -1,0 +1,10 @@
+<div>
+  <button (click)="sub()">Subscribe</button>
+  <ol>
+    <li *ngFor="let s of subscriptions">
+      <button (click)="s.gqlSocket.complete()">Complete</button>
+      ID: {{ s.id }}, Counter: {{ s.counter
+      }}{{ s.done ? ", Done" : ", Running" }}{{ s.error ? ", Error" : "" }}
+    </li>
+  </ol>
+</div>
